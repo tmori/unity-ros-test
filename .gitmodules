@@ -1,0 +1,3 @@
+[submodule "unity/Unity-Robotics-Hub"]
+	path = unity/Unity-Robotics-Hub
+	url = https://github.com/Unity-Technologies/Unity-Robotics-Hub.git
