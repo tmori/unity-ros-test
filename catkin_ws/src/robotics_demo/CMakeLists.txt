@@ -29,7 +29,16 @@ catkin_install_python(PROGRAMS
   scripts/color_publisher.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+find_package(catkin REQUIRED COMPONENTS 
+  roscpp rospy std_msgs genmsg message_generation
+)
 
+catkin_package()
+include_directories(
+  include 
+  ${catkin_INCLUDE_DIRS})
+add_executable(robo src/robo/robo.cpp)
+target_link_libraries(robo ${catkin_LIBRARIES})
 
 #############
 ## Testing ##
