@@ -1,0 +1,11 @@
+uint8 leds
+int32 power_a
+uint32 stop_a
+uint32 reset_angle_a
+int32 power_b
+uint32 stop_b
+uint32 reset_angle_b
+int32 power_c
+uint32 stop_c
+uint32 reset_angle_c
+uint32 gyro_reset
