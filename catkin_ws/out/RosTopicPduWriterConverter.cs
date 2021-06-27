@@ -20,7 +20,7 @@ namespace Hakoniwa.PluggableAsset.Communication.Pdu.ROS
         static public Message ConvertToMessage(RosTopicPduWriter pdu_writer)
         {
 
-            if (pdu_writer.GetTypeName().Equals("MActuator"))
+            if (pdu_writer.GetTypeName().Equals("Actuator"))
             {
                 MActuator tmp_topic = new MActuator();
 
@@ -38,7 +38,7 @@ namespace Hakoniwa.PluggableAsset.Communication.Pdu.ROS
 
                 return tmp_topic;
             }
-            if (pdu_writer.GetTypeName().Equals("MSensor"))
+            if (pdu_writer.GetTypeName().Equals("Sensor"))
             {
                 MSensor tmp_topic = new MSensor();
 

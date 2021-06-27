@@ -11,7 +11,7 @@ if len(sys.argv) != 4:
 	print "ERROR: generate.py <name> <in_dir> <out_dir>"
 	sys.exit()
 
-name=sys.argv[1]
+tpl_name=sys.argv[1] + ".tpl"
 in_dir=sys.argv[2]
 out_dir=sys.argv[3]
 
@@ -26,6 +26,9 @@ def to_conv(name):
 
 container = RosMessageContainer()
 container.to_conv = to_conv
+file = open(out_dir + '/RosTopics.json')
+container.ros_topics = json.load(file)
+
 container.msgs = []
 
 files = glob.glob(in_dir + "/*.msg")
@@ -35,9 +38,6 @@ for file in files:
 	msg_name = tmp[len(tmp) - 2]
 	ros_msg.name = msg_name
 	container.msgs.append(ros_msg)
-
-tpl_name = name + '.tpl'
-out_name = name + '.cs'
 
 
 for e in container.msgs:

@@ -20,7 +20,7 @@ namespace Hakoniwa.PluggableAsset.Communication.Pdu.ROS
         static public Message ConvertToMessage(RosTopicPduWriter pdu_writer)
         {
 {% for msg in container.msgs: %}
-            if (pdu_writer.GetTypeName().Equals("M{{msg.name}}"))
+            if (pdu_writer.GetTypeName().Equals("{{msg.name}}"))
             {
                 M{{msg.name}} tmp_topic = new M{{msg.name}}();
 {% for item in msg.json_data["fields"]: %}
