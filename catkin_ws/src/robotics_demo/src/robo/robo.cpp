@@ -384,8 +384,8 @@ int main(int argc, char **argv)
     ros::NodeHandle n;
     robotics_demo::Actuator ros_actuator_data;
 
-    ros::Publisher actuator_pub = n.advertise<robotics_demo::Actuator>("actuator", 1000);
-    ros::Subscriber sensor_sub = n.subscribe("sensor", 1000, sensorCallback);
+    ros::Publisher actuator_pub = n.advertise<robotics_demo::Actuator>("actuator", 1);
+    ros::Subscriber sensor_sub = n.subscribe("sensor", 1, sensorCallback);
 
     ros::Rate loop_rate(10);
     int count = 0;

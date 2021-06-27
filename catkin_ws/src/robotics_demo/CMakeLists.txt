@@ -11,7 +11,6 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_message_files(DIRECTORY msg)
 
-add_service_files(DIRECTORY srv)
 
 generate_messages(
   DEPENDENCIES
@@ -25,8 +24,6 @@ catkin_package(CATKIN_DEPENDS
 
 catkin_install_python(PROGRAMS
   scripts/server_endpoint.py
-  scripts/position_service.py
-  scripts/color_publisher.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 find_package(catkin REQUIRED COMPONENTS 

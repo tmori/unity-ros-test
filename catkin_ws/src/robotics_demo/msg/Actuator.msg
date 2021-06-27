@@ -5,7 +5,7 @@ int32 motor_power_c
 uint32 motor_stop_a
 uint32 motor_stop_b
 uint32 motor_stop_c
-int32 reset_angle_a
-int32 reset_angle_b
-int32 reset_angle_c
+int32 motor_reset_angle_a
+int32 motor_reset_angle_b
+int32 motor_reset_angle_c
 int32 gyro_reset
